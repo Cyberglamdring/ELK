@@ -20,14 +20,20 @@ EOF
 sudo yum install -y elasticsearch
 sudo yum clean all
 
-
+# sudo tee /etc/elasticsearch/elasticsearch.yml <<EOF
+# node.name: node-1
+# path.data: /var/lib/elasticsearch
+# path.logs: /var/log/elasticsearch
+# network.host: 172.10.48.5
+# http.port: 9200
+# luster.initial_master_nodes: node-1
+# EOF
+ 
 sudo tee /etc/elasticsearch/elasticsearch.yml <<EOF
-node.name: node-1
 path.data: /var/lib/elasticsearch
 path.logs: /var/log/elasticsearch
-network.host: 172.10.48.2
-http.port: 9200
-cluster.initial_master_nodes: node-1
+network.host: 172.10.48.5
+discovery.type: single-node
 EOF
 
 # enable & ran service
