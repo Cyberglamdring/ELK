@@ -22,8 +22,8 @@ sudo yum clean all
 # configurating remote accesse
 sudo tee /etc/kibana/kibana.yml <<EOF
 server.port: 5601
-server.host: "172.10.48.2"
-elasticsearch.hosts: ["http://172.10.48.2:9200"]
+server.host: "172.10.48.5"
+elasticsearch.hosts: ["http://172.10.48.5:9200"]
 EOF
 
 # enable & ran service

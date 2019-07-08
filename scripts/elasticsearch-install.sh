@@ -19,6 +19,7 @@ EOF
 # install elasticsearch
 sudo yum install -y elasticsearch
 sudo yum clean all
+chmod -R 755 /opt/apache-tomcat-8.5.42/logs/
 
 # sudo tee /etc/elasticsearch/elasticsearch.yml <<EOF
 # node.name: node-1
@@ -28,7 +29,7 @@ sudo yum clean all
 # http.port: 9200
 # luster.initial_master_nodes: node-1
 # EOF
- 
+
 sudo tee /etc/elasticsearch/elasticsearch.yml <<EOF
 path.data: /var/lib/elasticsearch
 path.logs: /var/log/elasticsearch

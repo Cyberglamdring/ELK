@@ -32,8 +32,7 @@ output {
     codec => rubydebug
   }
   elasticsearch {
-    hosts => ["172.10.48.2:9200"]
-    index => "tomcat"
+    hosts => ["172.10.48.5:9200"]
   }
 }
 EOF
